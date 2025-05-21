@@ -1,0 +1,57 @@
+form {
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 24px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Tahoma', sans-serif;
+  direction: rtl;
+
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #fff;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.center-button {
+  position: absolute;
+  top: 57.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

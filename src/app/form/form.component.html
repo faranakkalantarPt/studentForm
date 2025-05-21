@@ -1,0 +1,52 @@
+<form  class="form" [formGroup]="studentForm">
+  <div>
+    <label for="firstName">نام</label>
+    <input type="text" formControlName="firstName" id="firstName"  placeholder="نام خود را وارد کنید" />
+  </div>
+
+  @if( studentForm.controls['firstName'].errors?.['required'] && (studentForm.controls['firstName'].dirty || studentForm.controls['firstName'].touched )) {
+    <div  style="direction: rtl;
+   text-align: right;color: brown"><span>الزامی*</span></div>
+  }
+  <div>
+    <label for="lastName">نام خانوادگی</label>
+    <input type="text" formControlName="lastName" id="lastName"  placeholder="نام خانوادگی خود را وارد کنید"/>
+  </div>
+  <div>
+    @if( studentForm.controls['lastName'].errors?.['required'] && (studentForm.controls['lastName'].dirty || studentForm.controls['lastName'].touched )) {
+      <div  style="direction: rtl;
+   text-align: right;color: brown"><span>الزامی*</span></div>
+    }
+  </div>
+  <div>
+    <label for="studentId">شماره دانش آموزی</label>
+    <input type="text" formControlName="studentId" id="studentId" placeholder="شماره دانش آموزی خود را وار کنید ">
+  </div>
+  @if( studentForm.controls['studentId'].errors?.['required'] && (studentForm.controls['studentId'].dirty || studentForm.controls['studentId'].touched )) {
+    <div  style="direction: rtl;
+   text-align: right;color: brown"><span>الزامی*</span></div>
+  }
+  <div>
+    <label for="phone">شماره تماس</label>-->
+    <input type="text" formControlName="phone"  id="phone" placeholder="شماره تماس خود را وارد کنید" maxlength="11"/>
+  </div>
+  <div>
+    @if( studentForm.controls['phone'].errors?.['required'] && (studentForm.controls['phone'].dirty || studentForm.controls['phone'].touched )) {
+      <div  style="direction: rtl;
+   text-align: right;color: brown"><span>الزامی*</span></div>
+    }
+  </div>
+  <div>
+    <label>تاریخ تولد</label>
+    <input type="date" formControlName="birthDate" id="birthDate"/>
+  </div>
+
+  <div>
+    <button (click)="add()" [disabled]="!studentForm.valid" >ثبت</button>
+  </div>
+</form>
+
+
+
+<!--[disabled]="!studentForm.valid"-->
+

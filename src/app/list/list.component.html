@@ -1,0 +1,49 @@
+<!-- <div class="table-box">-->
+<!--  <p-table [value]="students" [tableStyle]="{ 'min-width': '50rem' }" >-->
+<!--    <ng-template #header>-->
+<!--      <tr>-->
+<!--        <th>نام</th>-->
+<!--        <th>نام خانوادگی</th>-->
+<!--        <th>شماره تماس</th>-->
+<!--        <th>شماره دانشجویی</th>-->
+<!--        <th>تاریخ تولد</th>-->
+<!--      </tr>-->
+<!--    </ng-template>-->
+<!--    <ng-template #body let-students>-->
+<!--      <tr>-->
+<!--        <td>{{ students.firstName }}</td>-->
+<!--        <td>{{ students.lastName }}</td>-->
+<!--        <td>{{ students.tel }}</td>-->
+<!--        <td>{{ students.studentNumber }}</td>-->
+<!--        <td>{{ students.birthday }}</td>-->
+<!--      </tr>-->
+<!--    </ng-template>-->
+<!--  </p-table>-->
+
+<!--</div>-->
+
+<!--<button>+</button>-->
+
+ <div class="table-box">
+<p-table [value]="students" [paginator]="true" [rows]="5" [tableStyle]="{ 'min-width': '50rem' }" [rowsPerPageOptions]="[5, 10, 20]">
+  <ng-template #header>
+    <tr>
+      <th style="width:25%">نام</th>
+      <th style="width:25%">نام خانوادگی</th>
+      <th style="width:25%">شماره تماس</th>
+      <th style="width:25%">شماره دانشجویی</th>
+      <th style="width:25%">تاریخ تولد</th>
+    </tr>
+  </ng-template>
+  <ng-template #body let-students>
+    <tr>
+      <td>{{ students.firstName }}</td>-->
+              <td>{{ students.lastName }}</td>
+              <td>{{ students.tel }}</td>
+              <td>{{ students.studentNumber }}</td>
+              <td>{{ students.birthday }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+</div>
+<button>+</button>
