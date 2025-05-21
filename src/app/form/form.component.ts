@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, Validators, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import { TableModule } from 'primeng/table';
+import {StudentModel,mapToStudentModel} from '../student-model';
+// @ts-ignore
 @Component({
   selector: 'app-form',
   imports: [ReactiveFormsModule ,TableModule],
@@ -23,16 +25,20 @@ export class FormComponent implements OnInit{
   ngOnInit():void {
   }
   add(){
-    let logs:string[]=[];
-    const formValues=this.studentForm.value;
-    logs.push(formValues);
-    console.log('student',logs);
-    this.myArray=[...logs];
+    // let logs:string[]=[];
+    // const formValues=this.studentForm.value;
+    // logs.push(formValues);
+    // console.log('student',logs);
+    // this.myArray=[...logs];
 
     if (this.studentForm.valid){
       console.log(this.studentForm.valid)
+      let model:StudentModel=mapToStudentModel(this.studentForm.value);
       this.studentForm.reset();
       }
+    else{
+      this.studentForm.markAllAsTouched();//باعث میشه خطاها نشون داده بشن
+    }
     }
   }
 
